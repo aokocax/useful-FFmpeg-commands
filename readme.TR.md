@@ -59,3 +59,6 @@ ffmpeg -i wm.mp4 -ss 00:00:01.23 -vframes 1 -q:v 2 output.jpg
 
 Videodaki her 1 saniyeden ekran görüntüsü çıkarmak
 ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg
+
+İki ayrı ses doyasını birleştirme
+ffmpeg -i sound1.wav -i sound2.wav -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1[out]" -map "[out]" soundconcat.wav
