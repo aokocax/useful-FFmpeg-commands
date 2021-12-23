@@ -2,28 +2,45 @@
 
 Herhangi bir video formatını diğer formata çevirme. 
 
-ffmpeg -i source.avi  source.mp4
+ffmpeg -i source.avi  output.mp4
 
-ffmpeg -i source.mov source.mp4
+ffmpeg -i source.mov output.mp4
 
 Videonun framerate'ini arttırma/azaltmak (Twitter ve bazı platformlar 30FPS video istemekteler)
 
-ffmpeg -i source.mp4 -framerate 30 source30fps.mp4
+ffmpeg -i source.mp4 -framerate 30 output30fps.mp4
 
 Videoyu kısaltmak
 
 İlk üç saniyesini almak
-ffmpeg -i source.mp4 -t 3 source3seconds.mp4
+ffmpeg -i source.mp4 -t 3 output3seconds.mp4
 ya da 
-ffmpeg -i source.mp4 -t 00:00:03 source3seconds.mp4
+ffmpeg -i source.mp4 -t 00:00:03 output3seconds.mp4
 
 Videonun belirli bir aralığını almak
 3. saniyeden başlayarak sonraki 3 saniye alınıyor
 ffmpeg ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4
 Belirli bir saniyeden videonun sonuna kadar videoyu kesmek
 
-ffmpeg ffmpeg -i source.mp4 -ss 3 source3seconds.mp4
+ffmpeg ffmpeg -i source.mp4 -ss 3 output3seconds.mp4
+ffmpeg ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4
+
+++İki videoyu arka arkaya eklemek
 
 
+Videoyu animasyonu gife çevirme
+ffmpeg -i source.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif
 
+// fps saniyelik frame sayısını belirtir scale ile çözünürlük belirtebilirsiniz
+//loop tekrar sayısını belirtir
+
+Videonun bir bölümünü animasyonlu gife çevirme
+ffmpeg -i source.mp4 -ss 1 -t2 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 tar.gif
+
+İki videoyu arka arkaya ekleme //audiosuz
+ffmpeg -i source1.mp4 -i source2.mp4 -y -filter_complex "[0:v][1:v] concat=n=2:v=1:[v]" -map "[v]" output.mp4
+
+İki videoyu arka arkaya ekleme //audio ile
+
+ffmpeg -i source1.mp4 -i source2.mp4 -y  -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0] concat=n=2:v=1:a=1 [v] [a]" -map "[a]" -map "[v]" output.mp4
 
