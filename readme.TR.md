@@ -53,3 +53,9 @@ ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)
 
 Videodaki tüm frameleri resim olarak çıkarma
 ffmpeg -i source.mp4  "%04d.png"
+
+Videodaki belirli bir karenin ekran görüntüsünü alma
+ffmpeg -i wm.mp4 -ss 00:00:01.23 -vframes 1 -q:v 2 output.jpg
+
+Videodaki her 1 saniyeden ekran görüntüsü çıkarmak
+ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg
