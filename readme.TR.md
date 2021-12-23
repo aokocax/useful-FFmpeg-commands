@@ -45,3 +45,11 @@ ffmpeg -i source1.mp4 -i source2.mp4 -y -filter_complex "[0:v][1:v] concat=n=2:v
 ffmpeg -i source1.mp4 -i source2.mp4 -y  -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0] concat=n=2:v=1:a=1 [v] [a]" -map "[a]" -map "[v]" output.mp4
 </pre>
 
+Ekran ortasına watermark filigran ekleme
+ffmpeg.exe -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 
+
+Ekranın belirli bir noktasına watermark filigran ekleme
+ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 
+
+Videodaki tüm frameleri resim olarak çıkarma
+ffmpeg -i source.mp4  "%04d.png"
