@@ -37,10 +37,11 @@ ffmpeg -i source.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]pa
 Videonun bir bölümünü animasyonlu gife çevirme
 ffmpeg -i source.mp4 -ss 1 -t2 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 tar.gif
 
-İki videoyu arka arkaya ekleme //audiosuz
+İki videoyu arka arkaya ekleme //audio'suz
 ffmpeg -i source1.mp4 -i source2.mp4 -y -filter_complex "[0:v][1:v] concat=n=2:v=1:[v]" -map "[v]" output.mp4
 
 İki videoyu arka arkaya ekleme //audio ile
-
+<pre>
 ffmpeg -i source1.mp4 -i source2.mp4 -y  -filter_complex "[0:v:0][0:a:0][1:v:0][1:a:0] concat=n=2:v=1:a=1 [v] [a]" -map "[a]" -map "[v]" output.mp4
+</pre>
 
