@@ -64,51 +64,51 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
   
 `ffmpeg.exe -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
-<li><h2> Ekranın belirli bir noktasına watermark filigran eklemek.</h2> </li>
+<li><h2>Adding a watermark to a specific point of the screen.</h2> </li>
   
 `ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
-<li><h2> Videodaki tüm frameleri resim olarak çıkarma</h2> </li>
+<li><h2>Extracting all the frames in the video as an image</h2> </li>
   
 `ffmpeg -i source.mp4  "%04d.png"`
 
-<li><h2> Videodaki belirli bir karenin ekran görüntüsünü almak.</h2> </li>
+<li><h2>Take a screenshot of a specific frame in the video.</h2> </li>
   
 `ffmpeg -i wm.mp4 -ss 00:00:01.23 -vframes 1 -q:v 2 output.jpg`
 
-<li><h2> Videodaki her 1 saniyeden ekran görüntüsü çıkarmak</h2> </li>
+<li><h2>Take a screenshot from every 1 second of the video</h2> </li>
   
 `ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
-<li><h2> İki ayrı ses dosyasını birleştirmek.</h2> </li>
+<li><h2>Merging two separate audio files.</h2> </li>
   
 `ffmpeg -i sound1.wav -i sound2.wav -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1[out]" -map "[out]" soundconcat.wav`
 
-<li><h2> Videodaki ses dosyasını mp4 olarak çıkarmak.</h2></li>
+<li><h2>Extracting the audio file from the video as mp4.</h2></li>
 
 `ffmpeg -i source.mp4 output.mp3`
 
-<li><h2> Videoyu sessiz hale getirmek.</h2></li>
+<li><h2>To mute the video.</h2></li>
 
 `ffmpeg -i source.mp4 -c copy -an sessiz.mp4`
 
-<li><h2> Fotoğraf galerisinden video yapmak. </h2></li>
+<li><h2>Making video from photo gallery.</h2></li>
 
 `ffmpeg -f concat -i filelist.txt -i audio.mp3 -c:a copy output.mp4`
 
-filelist.txt örneği
+filelist.txt sample file
 <pre>
 a1.jpg
 a2.jpg
 a3.jpg
 </pre>
-<li><h2>Video üzerine istenilen yazı fontu ile yazı yazmak.</h2></li>
+<li><h2>Writing text on the video with the desired font.</h2></li>
 
 `ffmpeg -i source.mp4  -filter:v "drawtext=enable='between(t,0,2)':fontsize=30:fontfile=font.otf:fontcolor=yellow:text='my text':x = (w - text_w) / 2:y = (h - text_h - line_h) / 2" output.mp4`
 
-> between(t,0,2) 0-2 saniye arasında gözüküyor
+> between(t,0,2) 0-2 seconds
  
-> ekranı ortalıyoruz x = (w - text_w) / 2:y = (h - text_h - line_h) / 2
+> center the screen x = (w - text_w) / 2:y = (h - text_h - line_h) / 2
 
-> x ve y değeri vererek istediğiniz pozisyonda çıkmasını sağlayabilirsiniz.
+> You can make it output in the position you want by giving x and y values.
 </ol>
