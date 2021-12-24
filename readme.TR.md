@@ -1,3 +1,9 @@
+Ücretsiz FFmpeg programı ile video dosyalarınız üzerinde kolaylıkla yapabileceğiniz işlemlerin listesi.
+FFmpeg programını bilgisayarınıza
+Windows için => https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-latest-win64-gpl-shared-4.4.zip 
+Mac Os için => https://evermeet.cx/ffmpeg/ffmpeg-105012-gbb813ccb45.zip
+Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffmpeg argümanlar` şeklinde çalıştırabilirsiniz
+
 <ol>
   <li><h2>Herhangi bir video formatını diğer formata çevirmek.</h2> </li>
 
