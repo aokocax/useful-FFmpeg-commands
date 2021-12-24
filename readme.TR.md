@@ -10,9 +10,14 @@
 
 `ffmpeg -i source.mp4 -framerate 30 output30fps.mp4`
 
-<li><h2> Videoyu kısaltmak.</h2></li>
+ <li><h2> Videoya ses ekleme</h2></li>
+ 
+ > Video veya görüntüden hangisi kısa olanın süresinde video biter.
+  
+`ffmpeg -i source.mp4 -i sound.mp3  -vcodec copy -map 0:v -map 1:a -map 1:a -shortest output.mp4`
+  
 
-<ul><li><h3> İlk üç saniyesini almak.</h3></li></ul>
+<li><h2> Videonun ilk üç saniyesini almak/kesmek.</li></h2>
   
 `ffmpeg -i source.mp4 -t 3 output3seconds.mp4`
   
@@ -20,20 +25,20 @@
 
 `ffmpeg -i source.mp4 -t 00:00:03 output3seconds.mp4`
 
-<ul><li><h3> Videonun belirli bir aralığını almak.</h3></li></ul>
+<li><h2> Videonun belirli bir aralığını almak.</li></h2>
   
 > 3. saniyeden başlayarak sonraki 3 saniye alınıyor
 
 `ffmpeg ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
 
-<ul><li><h3>  Belirli bir saniyeden videonun sonuna kadar videoyu kesmek.</h3></li></ul>
+<li><h2>  Belirli bir saniyeden videonun sonuna kadar videoyu kesmek.</li></h2>
 
 `ffmpeg ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
 
 `ffmpeg ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4`
 
 
-<li><h2> Videoyu animasyonu gife çevirme.</h2></li>
+<li><h2> Videoyu animasyonlu gife çevirme.</h2></li>
 
 `ffmpeg -i source.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 output.gif`
 
@@ -73,8 +78,15 @@
   
 `ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
-<li><h2> İki ayrı ses doyasını birleştirme</h2> </li>
+<li><h2> İki ayrı ses dosyasını birleştirme</h2> </li>
   
 `ffmpeg -i sound1.wav -i sound2.wav -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1[out]" -map "[out]" soundconcat.wav`
 
+<li><h2> Videodaki ses dosyasını mp4 olarak çıkarmak</h2></li>
+
+`ffmpeg -i source.mp4 output.mp3`
+
+<li><h2> Videoyu sessiz hale getirmek</h2></li>
+
+`ffmpeg -i source.mp4 -c copy -an sessiz.mp4`
 </ol>
