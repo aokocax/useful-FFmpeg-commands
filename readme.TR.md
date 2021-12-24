@@ -18,7 +18,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
 
  <li><h2> Videoya ses eklemek.</h2></li>
  
- > Video veya görüntüden hangisi kısa olanın süresinde video biter.
+ > Video veya görüntüden kısa olanın süresinde video biter.
   
 `ffmpeg -i source.mp4 -i sound.mp3  -vcodec copy -map 0:v -map 1:a -map 1:a -shortest output.mp4`
   
