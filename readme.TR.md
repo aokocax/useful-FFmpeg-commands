@@ -1,4 +1,3 @@
-<b>Türkçe</b>
 <ol>
   <li><h2>Herhangi bir video formatını diğer formata çevirmek.</h2> </li>
 
