@@ -5,6 +5,10 @@ Windows için => https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/
 Mac Os için => https://evermeet.cx/ffmpeg/ffmpeg-105012-gbb813ccb45.zip
 Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffmpeg argümanlar` şeklinde çalıştırabilirsiniz
 
+<h3>Yükleme yapmadan docker ile çalıştırma</h3>
+
+`docker run -it --rm -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg` komutunu `ffmpeg` komutu ile değiştirin.
+
 <ol>
   <li><h2>Herhangi bir video formatını diğer formata çevirmek.</h2> </li>
 
