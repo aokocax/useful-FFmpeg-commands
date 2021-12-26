@@ -85,7 +85,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
   
 `ffmpeg -i sound1.wav -i sound2.wav -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1[out]" -map "[out]" soundconcat.wav`
 
-<li><h2>Extracting the audio file from the video as mp4.</h2></li>
+<li><h2>Extracting the audio file from the video as mp3.</h2></li>
 
 `ffmpeg -i source.mp4 output.mp3`
 

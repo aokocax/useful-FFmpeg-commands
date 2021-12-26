@@ -88,7 +88,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
   
 `ffmpeg -i sound1.wav -i sound2.wav -filter_complex "[0:0][1:0]concat=n=2:v=0:a=1[out]" -map "[out]" soundconcat.wav`
 
-<li><h2> Videodaki ses dosyasını mp4 olarak çıkarmak.</h2></li>
+<li><h2> Videodaki ses dosyasını mp3 olarak çıkarmak.</h2></li>
 
 `ffmpeg -i source.mp4 output.mp3`
 
