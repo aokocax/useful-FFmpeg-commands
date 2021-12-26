@@ -93,6 +93,10 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
 
 `ffmpeg -i source.mp4 -c copy -an sessiz.mp4`
 
+<li><h2> Converting the audio format (without reprocessing the video).</h2></li>
+
+`ffmpeg -i source.mp4 -acodec mp3 -vcodec copy output.mp4`
+
 <li><h2>Making video from photo gallery.</h2></li>
 
 `ffmpeg -f concat -i filelist.txt -i audio.mp3 -c:a copy output.mp4`
