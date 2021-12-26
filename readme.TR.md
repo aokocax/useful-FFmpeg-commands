@@ -35,13 +35,13 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
   
 > 3. saniyeden başlayarak sonraki 3 saniye alınıyor
 
-`ffmpeg ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
 
 <li><h2>  Belirli bir saniyeden videonun sonuna kadar videoyu kesmek.</li></h2>
 
-`ffmpeg ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
 
-`ffmpeg ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4`
 
 
 <li><h2> Videoyu animasyonlu gife çevirmek.</h2></li>
@@ -66,7 +66,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
 
 <li><h2>Ekran ortasına watermark filigran eklemek.</h2></li>
   
-`ffmpeg.exe -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
+`ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
 <li><h2> Ekranın belirli bir noktasına watermark filigran eklemek.</h2> </li>
   
@@ -82,7 +82,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
 
 <li><h2> Videodaki her 1 saniyeden ekran görüntüsü çıkarmak</h2> </li>
   
-`ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
+`ffmpeg -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
 <li><h2> İki ayrı ses dosyasını birleştirmek.</h2> </li>
   

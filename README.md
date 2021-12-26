@@ -35,13 +35,13 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
   
 > Getting next 3 seconds starting from 3 seconds
 
-`ffmpeg ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
 
 <li><h2>Cut video from a specific second to the end of the video</li></h2>
 
-`ffmpeg ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
 
-`ffmpeg ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4`
+`ffmpeg -i source.mp4 -ss 00:00:03 output3seconds.mp4`
 
 
 <li><h2>Convert video to animated gif.</h2></li>
@@ -63,7 +63,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
 
 <li><h2>Adding a watermark to the middle of the screen.</h2></li>
   
-`ffmpeg.exe -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
+`ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
 <li><h2>Adding a watermark to a specific point of the screen.</h2> </li>
   
@@ -79,7 +79,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
 
 <li><h2>Take a screenshot from every 1 second of the video</h2> </li>
   
-`ffmpeg.exe -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
+`ffmpeg -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
 <li><h2>Merging two separate audio files.</h2> </li>
   
