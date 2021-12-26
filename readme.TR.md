@@ -12,7 +12,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
 
 `ffmpeg -i source.mov output.mp4`
 
-<li><h2>Videonun framerate'ini arttırma/azaltmak. (Twitter ve bazı platformlar 30FPS video istemekteler)</h2> </li>
+<li><h2>Videonun framerate'ini arttırma/azaltmak. (Twitter ve bazı platformlar 30FPS video istemekteler).</h2> </li>
 
 `ffmpeg -i source.mp4 -framerate 30 output30fps.mp4`
 
@@ -72,7 +72,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
   
 `ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
-<li><h2> Videodaki tüm frameleri resim olarak çıkarma</h2> </li>
+<li><h2> Videodaki tüm frameleri resim olarak çıkarma.</h2> </li>
   
 `ffmpeg -i source.mp4  "%04d.png"`
 
@@ -80,7 +80,7 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
   
 `ffmpeg -i wm.mp4 -ss 00:00:01.23 -vframes 1 -q:v 2 output.jpg`
 
-<li><h2> Videodaki her 1 saniyeden ekran görüntüsü çıkarmak</h2> </li>
+<li><h2> Videodaki her 1 saniyeden ekran görüntüsü çıkarmak.</h2> </li>
   
 `ffmpeg -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
