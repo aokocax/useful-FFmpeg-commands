@@ -1,7 +1,7 @@
 <h1>Useful FFmpeg commands</h1>
 The use of video in digital life is increasing exponentially day by day.
 I prepared a document explaining how you can easily find answers to video solutions/problems that you will need in daily life with FFmpeg library.
-I show you which commands to run for video solutions you will need with about 20 different scenarios in the file. You can forward your questions/questions about the document from the Issues section.
+I show you which commands to run for video solutions you will need with about 20 different scenarios in the file. 
 
 Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-latest-win64-gpl-shared-4.4.zip for Mac Os => https://evermeet After downloading from .cx/ffmpeg/ffmpeg-105012-gbb813ccb45.zip addresses, you can run ffmpeg as arguments by entering bin folder via terminal.
 
