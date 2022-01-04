@@ -1,3 +1,5 @@
+<a href="https://github.com/aokocax/useful-FFmpeg-commands/blob/main/README.md">=>English</a>
+
 Bant genişliklerinin artmasıyla dijital hayatta video kullanımı her geçen gün katlanarak artıyor. Ücretsiz FFmpeg programı ve kütüphanelerini kullanarak gündelik hayatta sıkça ihtiyaç duyacağınız video çözümlerine/sorunlarına bu kütüphane ile nasıl kolaylıkla cevap bulacağınızı anlatan bir doküman hazırladım. Dosyada 20 kadar farklı senaryo ile ihtiyaç duyacağınız video çözümleri için hangi komutları çalıştırmanız gerektiğini gösteriyorum. Doküman hakkındaki soru/sorularınızı Issues bölümünden iletebilirsiniz.
 
 FFmpeg programını bilgisayarınıza
