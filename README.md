@@ -15,7 +15,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
 
 `ffmpeg -i source.mov output.mp4`
 
-<li><h2>Increasing/decreasing the framerate of the video. (Twitter and some platforms require 30FPS video)</h2> </li>
+<li><h2>Increasing/decreasing the framerate of the video. (Twitter and some platforms require 30FPS video).</h2> </li>
 
 `ffmpeg -i source.mp4 -framerate 30 output30fps.mp4`
 
@@ -40,7 +40,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
 
 `ffmpeg -i source.mp4 -ss 3 -t 3 source3seconds.mp4`
 
-<li><h2>Cut video from a specific second to the end of the video</li></h2>
+<li><h2>Cut video from a specific second to the end of the video.</li></h2>
 
 `ffmpeg -i source.mp4 -ss 3 output3seconds.mp4`
 
@@ -72,7 +72,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
   
 `ffmpeg -i source.mp4 -i logo.png -filter_complex "overlay = (main_w - overlay_w)/2:(main_h - overlay_h) / 2" watermark.mp4 `
 
-<li><h2>Extracting all the frames in the video as an image</h2> </li>
+<li><h2>Extracting all the frames in the video as an image.</h2> </li>
   
 `ffmpeg -i source.mp4  "%04d.png"`
 
@@ -80,7 +80,7 @@ Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-B
   
 `ffmpeg -i wm.mp4 -ss 00:00:01.23 -vframes 1 -q:v 2 output.jpg`
 
-<li><h2>Take a screenshot from every 1 second of the video</h2> </li>
+<li><h2>Take a screenshot from every 1 second of the video.</h2> </li>
   
 `ffmpeg -i wm.mp4 -r 1  -f image2 screenshot-%03d.jpg`
 
