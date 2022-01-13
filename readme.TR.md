@@ -98,6 +98,10 @@ Adreslerinden indirdikten sonra terminal üzerinden bin klasörüne girerek `ffm
 
 `ffmpeg -i source.mp4 -c copy -an sessiz.mp4`
 
+<li><h2> Videodaki sesin formatını (görüntüyü yeniden işlemeden) dönüştürmek.</h2></li>
+
+`ffmpeg -i source.mp4 -acodec mp3 -vcodec copy output.mp4`
+
 <li><h2> Fotoğraf galerisinden video yapmak. </h2></li>
 
 `ffmpeg -f concat -i filelist.txt -i audio.mp3 -c:a copy output.mp4`
