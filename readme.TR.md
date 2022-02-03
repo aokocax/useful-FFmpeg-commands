@@ -117,4 +117,12 @@ a3.jpg
 > ekranı ortalıyoruz x = (w - text_w) / 2:y = (h - text_h - line_h) / 2
 
 > x ve y değeri vererek istediğiniz pozisyonda çıkmasını sağlayabilirsiniz.
+
+<li><h2>Videoyu segmentlere ayırma</h2></li>
+
+`ffmpeg -i input.mp4  -c copy -map 0 -segment_time 4 -f segment -segment_list list.txt output_video%03d.mp4`
+
+<li><h2>Segmentlere ayrılmış videoyu birleştirme</h2></li>
+
+`ffmpeg -y -v error -i list.txt -map 0 -c copy output.mp4`
 </ol>
