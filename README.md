@@ -115,4 +115,12 @@ a3.jpg
 > center the screen x = (w - text_w) / 2:y = (h - text_h - line_h) / 2
 
 > You can make it output in the position you want by giving x and y values.
+
+<li><h2>Split video into segments</h2></li>
+
+`ffmpeg -i input.mp4  -c copy -map 0 -segment_time 4 -f segment -segment_list list.txt output_video%03d.mp4`
+
+<li><h2>Concat segmented video</h2></li>
+
+`ffmpeg -y -v error -i list.txt -map 0 -c copy output.mp4`
 </ol>
