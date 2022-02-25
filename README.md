@@ -8,6 +8,10 @@ I show you which commands to run for video solutions you will need with about 20
 
 Download FFmpeg to your computer for Windows => https://github.com/BtbN/FFmpeg-Builds/releases for Mac Os => https://evermeet.cx/ffmpeg/ After downloading from .cx/ffmpeg/ffmpeg-105012-gbb813ccb45.zip addresses, you can run ffmpeg as arguments by entering bin folder via terminal.
 
+<h3>Docker run without installation</h3>
+
+`docker run -it --rm -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg` replace this command with `ffmpeg` command.
+
 <ol>
   <li><h2>Convert any video format to other format.</h2> </li>
 
